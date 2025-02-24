@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Form element styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        /* Rating styles */
+        .rating-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        /* Optional field indicator */
+        .optional {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        /* Submit button */
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Focus styles */
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 3px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                margin: 20px auto;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <form>
+            <div class="form-group">
+                <label>Name <span class="optional">(optional)</span></label>
+                <input type="text" name="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Email <span class="optional">(optional)</span></label>
+                <input type="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone <span class="optional">(optional)</span></label>
+                <input type="tel" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>Rating</label>
+                <div class="rating-container">
+                    <input type="radio" name="rating" value="1" required> 1
+                    <input type="radio" name="rating" value="2"> 2
+                    <input type="radio" name="rating" value="3"> 3
+                    <input type="radio" name="rating" value="4"> 4
+                    <input type="radio" name="rating" value="5"> 5
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Questions regarding product or service</label>
+                <textarea name="questions" placeholder="Enter your questions here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Additional Comments <span class="optional">(optional)</span></label>
+                <textarea name="comments" placeholder="Enter any additional comments"></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
